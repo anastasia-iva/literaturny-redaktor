@@ -272,8 +272,18 @@
             .edu-grid { grid-template-columns: 1fr; gap: 24px; }
             .reviews-grid { grid-template-columns: 1fr; gap: 24px; }
 
-            .book-cover-wrap { height: auto !important; aspect-ratio: 2 / 3; }
-            .book-cover-wrap img { object-fit: cover; height: 100%; }
+            /* ИСПРАВЛЕНИЕ ДЛЯ КАРТИНОК НА МОБИЛЬНЫХ */
+            .book-cover-wrap { 
+                height: auto !important; 
+                aspect-ratio: 2 / 3; 
+                display: block !important; /* Отключаем flex, чтобы работали пропорции */
+            }
+            .book-cover-wrap img { 
+                width: 100%; 
+                height: 100%; 
+                object-fit: cover; 
+                display: block; 
+            }
             .book-overlay { display: none !important; }
             .book-mobile-details { display: block; }
         }
