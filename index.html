@@ -261,15 +261,17 @@
 
         .desktop-br { display: inline; }
 
-      @media(max-width:850px){
+        @media(max-width:850px){
             .desktop-br { display: none; }
             .nav-links { display: none; }
 
-            /* Делаем главный экран просторным: мощные отступы сверху и снизу */
+            /* Главный экран: делаем честные большие отступы сверху и снизу */
             .hero-section { 
                 min-height: auto; 
-                padding: 80px 20px 80px 20px; /* Большой отступ сверху и снизу */
-                gap: 28px; /* Больше воздуха между всеми элементами */
+                padding-top: 80px !important;    /* Большой отступ СВЕРХУ до "Литературный редактор" */
+                padding-bottom: 80px !important; /* Большой отступ СНИЗУ после кнопок до черточки */
+                padding-left: 20px;
+                padding-right: 20px;
             }
 
             .b2b-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -294,7 +296,7 @@
             .book-overlay { display: none !important; }
             .book-mobile-details { display: block; }
 
-            /* Крупные, заметные цифры в ряд с хорошими отступами */
+            /* Крупные цифры в ряд с аккуратными отступами внутри */
             .hero-metrics {
                 display: flex;
                 flex-direction: row;
@@ -302,14 +304,13 @@
                 align-items: flex-start;
                 text-align: center;
                 gap: 12px;
-                margin-top: 20px;
-                margin-bottom: 20px;
+                margin: 24px 0;
             }
             .hero-metrics .metric {
                 font-size: 13px; 
             }
             .hero-metrics .metric strong {
-                font-size: 32px; /* Возвращаем большой, солидный размер цифр */
+                font-size: 32px; /* Крупные, заметные цифры */
                 display: block;
                 margin-bottom: 6px;
             }
