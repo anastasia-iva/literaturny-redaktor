@@ -264,13 +264,17 @@
         @media(max-width:850px){
             .desktop-br { display: none; }
             .nav-links{display:none}
-            /* Настройка цифр на главном экране: друг за другом вертикально и строго по центру */
+            /* Настройка цифр на главном экране: в одну строку */
             .hero-metrics {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: space-between;
                 align-items: center;
                 text-align: center;
-                gap: 16px;
+                gap: 8px;
+            }
+            .hero-metrics .metric {
+                font-size: 14px; /* Делаем текст чуть компактнее для телефона */
             }
             .hero-section { min-height: auto; padding: 36px 20px; }
             .b2b-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
