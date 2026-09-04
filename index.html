@@ -261,15 +261,15 @@
 
         .desktop-br { display: inline; }
 
-        @media(max-width:850px){
+       @media(max-width:850px){
             .desktop-br { display: none; }
             .nav-links { display: none; }
 
-            /* Главный экран: делаем честные большие отступы сверху и снизу */
+            /* Главный экран: просторный отступ сверху и снизу */
             .hero-section { 
                 min-height: auto; 
-                padding-top: 80px !important;    /* Большой отступ СВЕРХУ до "Литературный редактор" */
-                padding-bottom: 80px !important; /* Большой отступ СНИЗУ после кнопок до черточки */
+                padding-top: 80px !important;    
+                padding-bottom: 40px !important; 
                 padding-left: 20px;
                 padding-right: 20px;
             }
@@ -296,23 +296,23 @@
             .book-overlay { display: none !important; }
             .book-mobile-details { display: block; }
 
-            /* Крупные цифры в ряд с аккуратными отступами внутри */
+            /* Отодвигаем блок с линией и цифрами вниз от кнопок */
             .hero-metrics {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: flex-start;
                 text-align: center;
-                gap: 12px;
-                margin: 24px 0;
+                gap: 8px;
+                margin-top: 48px; /* Увеличивает расстояние между кнопками и разделительной линией */
             }
             .hero-metrics .metric {
                 font-size: 13px; 
             }
             .hero-metrics .metric strong {
-                font-size: 32px; /* Крупные, заметные цифры */
+                font-size: 28px; /* Крупные, красивые цифры */
                 display: block;
-                margin-bottom: 6px;
+                margin-bottom: 4px;
             }
         }
 
