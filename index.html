@@ -264,19 +264,31 @@
         @media(max-width:850px){
             .desktop-br { display: none; }
             .nav-links{display:none}
-            .hero-section { min-height: auto; padding: 36px 20px; }
-            .b2b-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .hero-section { 
+                min-height: auto; 
+                padding: 36px 20px; 
+            }
+
+            /* Компактная расстановка цифр: 2 сверху, 3-я по центру внизу */
+            .b2b-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 16px; 
+            }
+            .b2b-grid > *:nth-child(3) { 
+                grid-column: span 2; /* Третий блок занимает обе колонки */
+                text-align: center;  /* И текст выравнивается по центру */
+            }
+
             .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
             .job-row { grid-template-columns: 1fr; gap: 12px; padding: 24px 0; }
             .proof-box { grid-template-columns: 1fr auto; gap: 20px; padding: 30px; }
             .edu-grid { grid-template-columns: 1fr; gap: 24px; }
             .reviews-grid { grid-template-columns: 1fr; gap: 24px; }
 
-            /* ИСПРАВЛЕНИЕ ДЛЯ КАРТИНОК НА МОБИЛЬНЫХ */
             .book-cover-wrap { 
                 height: auto !important; 
                 aspect-ratio: 2 / 3; 
-                display: block !important; /* Отключаем flex, чтобы работали пропорции */
+                display: block !important; 
             }
             .book-cover-wrap img { 
                 width: 100%; 
