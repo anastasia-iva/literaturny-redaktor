@@ -261,15 +261,15 @@
 
         .desktop-br { display: inline; }
 
-       @media(max-width:850px){
+      @media(max-width:850px){
             .desktop-br { display: none; }
             .nav-links { display: none; }
 
-            /* Делаем главный экран просторным: большие отступы сверху и снизу */
+            /* Делаем главный экран просторным: мощные отступы сверху и снизу */
             .hero-section { 
                 min-height: auto; 
-                padding: 64px 20px 48px 20px; /* Крупный отступ сверху перед заголовком и снизу после кнопок */
-                gap: 24px; /* Комфортное расстояние между элементами */
+                padding: 80px 20px 80px 20px; /* Большой отступ сверху и снизу */
+                gap: 28px; /* Больше воздуха между всеми элементами */
             }
 
             .b2b-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -294,23 +294,24 @@
             .book-overlay { display: none !important; }
             .book-mobile-details { display: block; }
 
-            /* Аккуратные крупные цифры в ряд с переносами */
+            /* Крупные, заметные цифры в ряд с хорошими отступами */
             .hero-metrics {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: flex-start;
                 text-align: center;
-                gap: 8px;
-                margin-top: 12px;
+                gap: 12px;
+                margin-top: 20px;
+                margin-bottom: 20px;
             }
             .hero-metrics .metric {
-                font-size: 13px; /* Аккуратный размер текста подписей */
+                font-size: 13px; 
             }
             .hero-metrics .metric strong {
-                font-size: 24px; /* Крупные, заметные цифры */
+                font-size: 32px; /* Возвращаем большой, солидный размер цифр */
                 display: block;
-                margin-bottom: 4px;
+                margin-bottom: 6px;
             }
         }
 
