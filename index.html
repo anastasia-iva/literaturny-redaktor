@@ -261,22 +261,17 @@
 
         .desktop-br { display: inline; }
 
-        @media(max-width:850px){
+       @media(max-width:850px){
             .desktop-br { display: none; }
-            .nav-links{display:none}
-            /* Настройка цифр на главном экране: в одну строку */
-            .hero-metrics {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                text-align: center;
-                gap: 8px;
+            .nav-links { display: none; }
+
+            /* Делаем главный экран просторным: большие отступы сверху и снизу */
+            .hero-section { 
+                min-height: auto; 
+                padding: 64px 20px 48px 20px; /* Крупный отступ сверху перед заголовком и снизу после кнопок */
+                gap: 24px; /* Комфортное расстояние между элементами */
             }
-            .hero-metrics .metric {
-                font-size: 14px; /* Делаем текст чуть компактнее для телефона */
-            }
-            .hero-section { min-height: auto; padding: 36px 20px; }
+
             .b2b-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
             .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
             .job-row { grid-template-columns: 1fr; gap: 12px; padding: 24px 0; }
@@ -288,7 +283,7 @@
             .book-cover-wrap { 
                 height: auto !important; 
                 aspect-ratio: 2 / 3; 
-                display: block !important; /* Отключаем flex, чтобы работали пропорции */
+                display: block !important; 
             }
             .book-cover-wrap img { 
                 width: 100%; 
@@ -298,6 +293,25 @@
             }
             .book-overlay { display: none !important; }
             .book-mobile-details { display: block; }
+
+            /* Аккуратные крупные цифры в ряд с переносами */
+            .hero-metrics {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                text-align: center;
+                gap: 8px;
+                margin-top: 12px;
+            }
+            .hero-metrics .metric {
+                font-size: 13px; /* Аккуратный размер текста подписей */
+            }
+            .hero-metrics .metric strong {
+                font-size: 24px; /* Крупные, заметные цифры */
+                display: block;
+                margin-bottom: 4px;
+            }
         }
 
         @media(max-width:600px){
@@ -357,7 +371,7 @@
                 </div>
                 <div class="hero-metrics">
                     <div class="metric"><strong>50+</strong><span>отредактированных книг</span></div>
-                    <div class="metric"><strong>3 года</strong><span>опыта</span></div>
+                    <div class="metric"><strong>3</strong><span>года опыта</span></div>
                     <div class="metric"><strong>3</strong><span>издательства</span></div>
                 </div>
             </div>
